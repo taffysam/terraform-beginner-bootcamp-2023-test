@@ -54,11 +54,11 @@ AWS CLI is installed for this project and we need via the ./bin/install_aws_cli
 
 - Before we start any AWS CLI configuration we can check if any configuration has been done via the below:
 
-```sh
+
  aws sts get-caller-identity
 
 
 aws configure
 
-```
+
 Next step is get AWS CLI envs
