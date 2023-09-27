@@ -33,7 +33,7 @@ Also note that when running the bash script add the below line at the top so tha
 **#!/usr/bin/env bash**
 
 
-```Hello =$Hello
+##Hello =$Hello
 ## **Printing Variables**
 echo &AWS_var
 ## **Scoping of Environment Variables**
