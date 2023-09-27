@@ -85,11 +85,15 @@ Also note that when running the bash script add the below line at the top so tha
 - We can aslo set and unset variables in git using **export $<>**, *echo &<>* and **unset <>**. Make note that we unsetting the variable we do not use the $.
 - Also a variable can be set as below
 
+
+```Hello =$Hello
+
 ```sh
 
 Hello =$Hello
 
 ```Hello =$Hello
+
 
 
 ```
@@ -164,6 +168,7 @@ Output should look like the one below:
     "Arn": "arn:aws:iam::FADUXAkkkQLOO000KB:user/terraform-begginer-bootcamp"
 }
 
+
 ```
  aws sts get-caller-identity
 
@@ -175,4 +180,5 @@ aws configure
 
 ```
 Next step is get AWS CLI envs
+
 
