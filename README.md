@@ -69,3 +69,30 @@ aws configure
 
 
 Next step is get AWS CLI envs
+
+### **Get the AWS CLI env variables**
+
+- [These are available on](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html)
+
+export AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
+export AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+export AWS_DEFAULT_REGION=us-west-2
+
+
+
+
+gp env AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
+gp env AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+gp env AWS_DEFAULT_REGION=us-west-2
+
+
+run the below 
+aws sts get-caller-identity
+
+Output should look like the one below:
+
+
+ "UserId": "FADUXAkkkQLOO000KB",
+    "Account": "10879846784999",
+    "Arn": "arn:aws:iam::FADUXAkkkQLOO000KB:user/terraform-begginer-bootcamp"
+}
