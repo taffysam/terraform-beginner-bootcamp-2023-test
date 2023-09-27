@@ -61,6 +61,7 @@ AWS CLI is installed for this project and we need via the ./bin/install_aws_cli
 
 - Before we start any AWS CLI configuration we can check if any configuration has been done via the below:
 
+#### 13-refactoring-aws-cli
 
  aws sts get-caller-identity
 
@@ -83,7 +84,7 @@ export AWS_DEFAULT_REGION=us-west-2
 
 gp env AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
 gp env AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
-gp env AWS_DEFAULT_REGION=us-west-2
+gp env AWS_DEFAULT_REGION=us-west-2fake
 
 
 run the below 
@@ -96,3 +97,16 @@ Output should look like the one below:
     "Account": "10879846784999",
     "Arn": "arn:aws:iam::FADUXAkkkQLOO000KB:user/terraform-begginer-bootcamp"
 }
+=======
+```
+ aws sts get-caller-identity
+
+```
+
+ or 
+```
+aws configure
+
+```
+Next step is get AWS CLI envs
+
