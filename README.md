@@ -181,4 +181,59 @@ aws configure
 ```
 Next step is get AWS CLI envs
 
+#### **Terraform Basics**
+- get providers, modules and others
+- Providers are way you directly interract with an API to make it powered by terraform
+- a mapping of APIs to be utilised within terraform.
+- direct interfaces to API
+
+#### **Module**
+- a collection of terraform files
+- used to give a way to utilise the API
+- templates 
+
+[These are available at](https://registry.terraform.io/)
+
+
+#### **Terraform Console**
+- we can see all the commands by typing 'terraform'
+
+
+
+
+#### **Key Providers**
+
+Example:
+Random
+- [Created random items](https://registry.terraform.io/providers/hashicorp/random/latest)
+
+#### **Key Terraform commands**
+
+  - **terraform init**          Prepare your working directory for other commands
+  - **terraform validate**      Check whether the configuration is valid
+  - **terraform plan**          Show changes required by the current configuration
+  - **terraform apply**         Create or update infrastructure
+  - **terraform destroy**       Destroy previously-created infrastructure
+  - **terraform state** 
+  - **terraform output** 
+  - **terraform apply --auto-approve**  Automatically approve an apply
+  
+  
+  
+  Terraform Lock Files
+  Containes locked versioning for providers and modules to be used for the project.
+  Should be commited to your version control system eg GitHub
+  
+  
+  'terraform.tffiles'
+   Contains information about your current state of your infrastructure
+   Should not be commited to your version control system 
+   Can contain sensentive information
+   
+  'terraform.tffiles.backup'
+  the previous state file state
+
+
+  Terraform Directory 
+  .terraform : contains binaries of terraform
 
