@@ -35,8 +35,7 @@ Also note that when running the bash script add the below line at the top so tha
 - We can aslo set and unset variables in git using **export $<>**, *echo &<>* and **unset <>**. Make note that we unsetting the variable we do not use the $.
 - Also a variable can be set as below
 
-```
-Hello =$Hello
+```Hello =$Hello
 
 ```
 
@@ -47,8 +46,9 @@ When you open new bash code terminal they will not recognise env variables from 
 - When persit env variable in secrect storage.
 
 
-gp env Hello ="world"
+```gp env Hello ="world"
 
+```
 
 ##Environment Variables can also be set in vargitpod.
 - NB: These are not supposed to be non sensentive variables
