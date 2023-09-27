@@ -150,8 +150,6 @@ export AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 export AWS_DEFAULT_REGION=us-west-2
 
 
-
-
 gp env AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
 gp env AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
 gp env AWS_DEFAULT_REGION=us-west-2fake
@@ -197,8 +195,6 @@ Next step is get AWS CLI envs
 
 #### **Terraform Console**
 - we can see all the commands by typing 'terraform'
-
-
 
 
 #### **Key Providers**
