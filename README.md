@@ -37,12 +37,20 @@ Also note that when running the bash script add the below line at the top so tha
 
 ```
 Hello =$Hello
+
+```
+
 ## Printing Variables
 echo &AWS_var
 ##Scoping of Environment Variables
 When you open new bash code terminal they will not recognise env variables from the last terminal. So thesewill be set as global or persiting env variables
 - When persit env variable in secrect storage.
+
+```
 gp env Hello ="world"
+
+```
+
 ##Environment Variables can also be set in vargitpod.
 - NB: These are not supposed to be non sensentive variables
 
@@ -54,11 +62,11 @@ AWS CLI is installed for this project and we need via the ./bin/install_aws_cli
 
 - Before we start any AWS CLI configuration we can check if any configuration has been done via the below:
 
-
+```
  aws sts get-caller-identity
 
 
 aws configure
-
+```
 
 Next step is get AWS CLI envs
