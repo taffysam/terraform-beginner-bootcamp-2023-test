@@ -47,6 +47,7 @@ BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
 PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
 UBUNTU_CODENAME=jammy
 
+```
 
 ##**Shebanh Unix**
 Also note that when running the bash script add the below line at the top so that you dont have to go via source each tme ypu want to run the file.
