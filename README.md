@@ -45,3 +45,23 @@ When you open new bash code terminal they will not recognise env variables from 
 gp env Hello ="world"
 ##Environment Variables can also be set in vargitpod.
 - NB: These are not supposed to be non sensentive variables
+
+
+### **AWS CLI INSTALLATION**
+
+AWS CLI is installed for this project and we need via the ./bin/install_aws_cli
+[AWS CLI Installation](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
+
+- Before we start any AWS CLI configuration we can check if any configuration has been done via the below:
+
+```
+ aws sts get-caller-identity
+
+```
+
+ or 
+```
+aws configure
+
+```
+Next step is get AWS CLI envs
