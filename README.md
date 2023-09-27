@@ -8,3 +8,20 @@ Given a version number **MAJOR.MINOR.PATCH**, increment the:
 - **MINOR** version when you add functionality in a backward compatible manner
 - **PATCH** version when you make backward compatible bug fixes
 Additional labels for pre-release and build metadata are available as extensions to the MAJOR.MINOR.PATCH format.
+
+
+## **Installing Terraform CLI**
+- We have added a new file install_terraform_cli. This is a bash script that will install Terraform CLI on gitpod.
+- To have the file run we will change file ownership and as well as make the file executable
+
+- We made use of the below commands 
+
+1. **Chaging file ownership** [File Ownership](https://en.wikipedia.org/wiki/Ownership)
+
+
+2. **Making File Executable** [File-system_permissions](https://en.wikipedia.org/wiki/File-system_permissions)
+
+
+Also note that when running the bash script add the below line at the top so that you dont have to go via source each tme ypu want to run the file.
+
+**#!/usr/bin/env bash**
