@@ -1,7 +1,5 @@
 # Terraform Beginner Bootcamp 2023
 
-# Terraform Beginner Boot
-
 **Semantic Versioning 2.0.0**
 **Summary**
 Given a version number **MAJOR.MINOR.PATCH**, increment the:
