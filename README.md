@@ -57,10 +57,7 @@ AWS CLI is installed for this project and we need via the ./bin/install_aws_cli
 ```
  aws sts get-caller-identity
 
-```
 
- or 
-```
 aws configure
 
 ```
