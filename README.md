@@ -24,21 +24,23 @@ Additional labels for pre-release and build metadata are available as extensions
 
 2. **Making File Executable** [File-system_permissions](https://en.wikipedia.org/wiki/File-system_permissions)
 
-
+## **OS Version**
+- It is impontant to understand the UNIX version you are running from so that the files can be customised accordingly
+- We used this link to undrstand our [UNIX version]() 
+Shebanh Unix
 Also note that when running the bash script add the below line at the top so that you dont have to go via source each tme ypu want to run the file.
 
 **#!/usr/bin/env bash**
 
 
-```
-Hello =$Hello
-## Printing Variables
+```Hello =$Hello
+## **Printing Variables**
 echo &AWS_var
-##Scoping of Environment Variables
+## **Scoping of Environment Variables**
 When you open new bash code terminal they will not recognise env variables from the last terminal. So thesewill be set as global or persiting env variables
 - When persit env variable in secrect storage.
 gp env Hello ="world"
-##Environment Variables can also be set in vargitpod.
+## **Environment Variables can also be set in vargitpod.**
 - NB: These are not supposed to be non sensentive variables
 
 
