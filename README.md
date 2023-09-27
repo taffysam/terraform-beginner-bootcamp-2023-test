@@ -88,6 +88,10 @@ Also note that when running the bash script add the below line at the top so tha
 ```sh
 
 Hello =$Hello
+
+```Hello =$Hello
+
+
 ```
 
 ## Printing Variables
@@ -107,6 +111,11 @@ gp env Hello ="world"
 
 
 gp env Hello ="world"
+
+```gp env Hello ="world"
+
+```
+
 ##Environment Variables can also be set in vargitpod.
 - NB: These are not supposed to be non sensentive variables
 
@@ -117,6 +126,43 @@ AWS CLI is installed for this project and we need via the ./bin/install_aws_cli
 [AWS CLI Installation](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html)
 
 - Before we start any AWS CLI configuration we can check if any configuration has been done via the below:
+
+#### 13-refactoring-aws-cli
+
+ aws sts get-caller-identity
+
+
+aws configure
+
+
+Next step is get AWS CLI envs
+
+### **Get the AWS CLI env variables**
+
+- [These are available on](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html)
+
+export AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
+export AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+export AWS_DEFAULT_REGION=us-west-2
+
+
+
+
+gp env AWS_ACCESS_KEY_ID=AKIAIOSFODNN7EXAMPLE
+gp env AWS_SECRET_ACCESS_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYEXAMPLEKEY
+gp env AWS_DEFAULT_REGION=us-west-2fake
+
+
+run the below 
+aws sts get-caller-identity
+
+Output should look like the one below:
+
+
+ "UserId": "FADUXAkkkQLOO000KB",
+    "Account": "10879846784999",
+    "Arn": "arn:aws:iam::FADUXAkkkQLOO000KB:user/terraform-begginer-bootcamp"
+}
 
 ```
  aws sts get-caller-identity
@@ -129,3 +175,4 @@ aws configure
 
 ```
 Next step is get AWS CLI envs
+
