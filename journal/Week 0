@@ -1,4 +1,30 @@
-## Terraform Beginner Boot Camp
+Terraform Beginner Boot Camp Week 0
+
+Table of Contents
+  * [**Installing Terraform CLI**](#--installing-terraform-cli--)
+  * [**Refactoring AWS CLI**](#--refactoring-aws-cli--)
+- [Terraform Beginner Boot](#terraform-beginner-boot)
+  * [**Semantic Versioning 2.0.0**](#--semantic-versioning-200--)
+  * [**Installing Terraform CLI**](#--installing-terraform-cli---1)
+  * [Working With Environment Variables](#working-with-environment-variables)
+  * [**Terraform Basics**](#--terraform-basics--)
+  * [**Terraform Module**](#--terraform-module--)
+  * [**Terraform Console**](#--terraform-console--)
+  * [**Terraform Key Providers**](#--terraform-key-providers--)
+      - [**Key Terraform commands**](#--key-terraform-commands--)
+  * [**Terraform Cloud login issues**](#--terraform-cloud-login-issues--)
+  * [*Terraform Cloud Login bash Script**](#-terraform-cloud-login-bash-script--)
+- [Check if TERRAFORM_CLOUD_TOKEN is set](#check-if-terraform-cloud-token-is-set)
+- [Define the JSON structure](#define-the-json-structure)
+- [Check if TERRAFORM_CLOUD_TOKEN is set](#check-if-terraform-cloud-token-is-set-1)
+- [Specify the target directory and file path](#specify-the-target-directory-and-file-path)
+- [Ensure the target directory exists, create it if not](#ensure-the-target-directory-exists--create-it-if-not)
+- [Define the JSON structure](#define-the-json-structure-1)
+- [Create credentials.tfrc.json](#create-credentialstfrcjson)
+
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
+
 
 **Semantic Versioning 2.0.0**
 **Summary**
