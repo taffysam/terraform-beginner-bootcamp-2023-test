@@ -1,4 +1,5 @@
 
+
 terraform {
   required_providers {
     aws = {
@@ -10,13 +11,20 @@ terraform {
       source = "hashicorp/random"
       version = "3.5.1"
     }
-  
-  }
   }
 
+  cloud {
+    organization = "Tafadzwa"
+
+    workspaces {
+      name = "terra-house-1"
+    }
+  }
+ 
+}
 
 provider "random" {
-  # Configuration options
+  # Configuration options for the random provider, if needed.
 }
 
 resource "random_string" "bucket_name" {
@@ -24,16 +32,15 @@ resource "random_string" "bucket_name" {
   special = false
 }
 
-resource "aws_s3_bucket" "example"{
+resource "aws_s3_bucket" "example" {
   bucket = "terraform-test-example-bucket"
 
   tags = {
-    Name = "my-s3-bootcamp-bucket"
+    Name        = "my-s3-bootcamp-bucket"
     Environment = "Dev"
   } 
-  }
-
-output "random_bucket_name"{
-value = random_string.bucket_name.result
 }
 
+output "random_bucket_name" {
+  value = random_string.bucket_name.result
+}
