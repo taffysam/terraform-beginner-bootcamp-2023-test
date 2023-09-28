@@ -1,6 +1,19 @@
 # Terraform Beginner Boot
 
-**Semantic Versioning 2.0.0**
+## Table of Contents
+- [Semantic Version](#semantic-versioning-200)
+- [Installing Terraform CLI](#installing-terraform-cli)
+- [Bash Scripting Considerations](#bash-script-considerations)
+- [OS Version](#os-version)
+- [Working With Environment Variables](#working-with-environment-variables)
+- [Setting and Unsetting Variables](#setting-and-unsetting-variables)
+- [AWS CLI Installation](#aws-cli-installation)
+- 
+
+
+
+
+## **Semantic Versioning 2.0.0**
 **Summary**
 Given a version number **MAJOR.MINOR.PATCH**, increment the:
 
@@ -15,7 +28,7 @@ Additional labels for pre-release and build metadata are available as extensions
 - This has been mde neccesary to fix the terrafom gpg issues
 - To have the file run we will change file ownership and as well as make the file executable
 
-##**Bash Script Considerations**  
+## **Bash Script Considerations**  
 
 - We have added a new file install_terraform_cli. This is a bash script that will install Terraform CLI on gitpod.
 - To have the file run we will change file ownership and as well as make the file executable
@@ -56,7 +69,7 @@ UBUNTU_CODENAME=jammy
 
 ```
 
-##**Shebanh Unix**
+**Shebanh Unix**
 Also note that when running the bash script add the below line at the top so that you dont have to go via source each tme ypu want to run the file.
 [Using Shebang](https://bash.cyberciti.biz/guide/Shebang)
 
@@ -64,7 +77,7 @@ ChatGPT reccomended we use the first format for OS distribution portability
 **#!/usr/bin/env bash**
 **#!/usr/bin/bash**
 
-##**Execution Considerations**##
+**Execution Considerations**##
 - When executing bash scripts we can use 
 
 ./bin/install_tearrform_cli
@@ -76,12 +89,11 @@ Also note that when running the bash script add the below line at the top so tha
 **#!/usr/bin/env bash**
 
 
-
 ## Working With Environment Variables ####
 
 - we can filter variable using env | grep AWS _VAR
 
-## Setting and Unsetting Variables 
+**Setting and Unsetting Variables** 
 - We can aslo set and unset variables in git using **export $<>**, *echo &<>* and **unset <>**. Make note that we unsetting the variable we do not use the $.
 - Also a variable can be set as below
 
@@ -98,7 +110,7 @@ Hello =$Hello
 
 ```
 
-## Printing Variables
+**Printing Variables**
 echo &AWS_var
 ##Scoping of Environment Variables
 When you open new bash code terminal they will not recognise env variables from the last terminal. So thesewill be set as global or persiting env variables
