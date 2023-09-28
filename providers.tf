@@ -19,10 +19,6 @@ terraform {
       name = "terra-house-1"
     }
  
-   workspaces {
-    name = "terra-house-1"
-   }
-
   }
 
  
