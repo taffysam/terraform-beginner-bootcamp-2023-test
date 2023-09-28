@@ -1,46 +1,10 @@
-
-
-terraform {
-  required_providers {
-    aws = {
-      source = "hashicorp/aws"
-      version = "5.18.1"
-    }
-  
-    random = {
-      source = "hashicorp/random"
-      version = "3.5.1"
-    }
-  }
-
-  cloud {
-    organization = "Tafadzwa"
-
-    workspaces {
-      name = "terra-house-1"
-    }
-  }
  
-}
-
-provider "random" {
-  # Configuration options for the random provider, if needed.
-}
-
-resource "random_string" "bucket_name" {
-  length  = 16
-  special = false
-}
-
 resource "aws_s3_bucket" "example" {
   bucket = "terraform-test-example-bucket"
 
   tags = {
-    Name        = "my-s3-bootcamp-bucket"
+    Name    = "my-s3-bootcamp-bucket"
     Environment = "Dev"
+    UserUuid    = var.user_uuid
   } 
-}
-
-output "random_bucket_name" {
-  value = random_string.bucket_name.result
 }
