@@ -12,7 +12,7 @@ terraform {
   }
 
    cloud {
-    organization="Tafadzwa"
+    organization = "Tafadzwa"
 
     workspaces {
       name = "terra-house-1"
