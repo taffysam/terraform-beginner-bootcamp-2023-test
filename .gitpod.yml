@@ -3,6 +3,8 @@ tasks:
     before:
       source ./bin/install_terraform_cli
       source ./bin/install_aws_cli
+      source ./bin/set_tf_alias
+      source ./bin/generate_tfrc_credentials
     init: |
       sudo apt-get update && sudo apt-get install -y gnupg software-properties-common curl
       curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
