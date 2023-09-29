@@ -28,8 +28,23 @@ module "terrahouse_aws" {
   bucket_name = var.bucket_name
 }
 
-resource "aws_s3_bucket" "website" {
-  bucket = aws_s3_bucket.website
-  acl    = "public-read"
+resource "aws_s3_bucket_website_configuration" "bootcamp_2023" {
+  bucket = aws_s3_bucket.bootcamp_2023.bucket
 
+  index_document {
+    suffix = "index.html"
+  }
+
+  error_document {
+    key = "error.html"
+  }
+
+  routing_rule {
+    condition {
+      key_prefix_equals = "docs/"
+    }
+    redirect {
+      replace_key_prefix_with = "documents/"
+    }
+  }
 }
