@@ -12,21 +12,17 @@ terraform {
     }
   }
 
-#resource "aws_s3_bucket" "my_website_bucket"{
-#  bucket = var.bucket-name
-# 
-#  tags = {
-#    UserUuid = var.user_uuid
-#  }
-#}
-
-#}
-
 module "terrahouse_aws" {
   source = "./modules/terrahouse_aws"
-
   user_uuid = var.user_uuid
   bucket_name = var.bucket_name
+}
+
+resource "aws_s3_bucket" "my_website_bucket"{
+  bucket = var.bucket-name
+    tags = {
+    UserUuid = var.user_uuid
+  }
 }
 
 resource "aws_s3_bucket_website_configuration" "bootcamp_2023" {
@@ -39,15 +35,6 @@ resource "aws_s3_bucket_website_configuration" "bootcamp_2023" {
   error_document {
     key = "error.html"
   }
-
-
-}
-
-module "terrahouse_aws" {
-  source = "./modules/terrahouse_aws"
-
-  user_uuid = var.user_uuid
-  bucket_name = var.bucket_name
 }
 
 resource "aws_s3_bucket_website_configuration" "bootcamp_2023" {
