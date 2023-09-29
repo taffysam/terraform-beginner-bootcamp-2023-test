@@ -73,4 +73,7 @@ resource "aws_s3_bucket_website_configuration" "bootcamp_2023" {
 
 }
 
+
+}
+
 }
