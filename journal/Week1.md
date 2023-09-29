@@ -14,3 +14,24 @@ Our root module structure is as follows:
 ```
 
 [Root Module Structure](https://developer.hashicorp.com/terraform/language/modules/develop/structure)
+
+
+## Passing input Variables
+
+
+
+## Module Sources
+
+Can be from 3 main sources:
+- GitHub
+- Local
+- Terraform Registry
+  
+```terraform
+module "terrahouse_aws" {
+  source = "./modules/terrahouse_aws"
+  user_uuid = var.user_uuid
+  bucket_name = var.bucket_name
+}
+ ``` 
+ [Module Sources](https://developer.hashicorp.com/terraform/language/modules/sources) 
