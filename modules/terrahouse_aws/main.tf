@@ -19,7 +19,7 @@ terraform {
 #    UserUuid = var.user_uuid
 #  }
 #}
-}
+#}
 
 module "terrahouse_aws" {
   source = "./modules/terrahouse_aws"
@@ -47,4 +47,5 @@ resource "aws_s3_bucket_website_configuration" "bootcamp_2023" {
       replace_key_prefix_with = "documents/"
     }
   }
+}
 }
