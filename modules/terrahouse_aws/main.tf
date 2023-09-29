@@ -19,6 +19,7 @@ terraform {
 #    UserUuid = var.user_uuid
 #  }
 #}
+
 #}
 
 module "terrahouse_aws" {
@@ -39,6 +40,28 @@ resource "aws_s3_bucket_website_configuration" "bootcamp_2023" {
     key = "error.html"
   }
 
+
+}
+
+module "terrahouse_aws" {
+  source = "./modules/terrahouse_aws"
+
+  user_uuid = var.user_uuid
+  bucket_name = var.bucket_name
+}
+
+resource "aws_s3_bucket_website_configuration" "bootcamp_2023" {
+  bucket = aws_s3_bucket.bootcamp_2023.bucket
+
+  index_document {
+    suffix = "index.html"
+  }
+
+  error_document {
+    key = "error.html"
+  }
+
+
   routing_rule {
     condition {
       key_prefix_equals = "docs/"
@@ -47,5 +70,7 @@ resource "aws_s3_bucket_website_configuration" "bootcamp_2023" {
       replace_key_prefix_with = "documents/"
     }
   }
+
 }
+
 }
