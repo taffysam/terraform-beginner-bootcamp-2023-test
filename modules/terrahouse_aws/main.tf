@@ -1,4 +1,3 @@
-
 terraform {
   required_providers {
     aws = {
@@ -11,26 +10,25 @@ terraform {
       version = "3.5.1"
     }
   }
+}
 
-#resource "aws_s3_bucket" "my_website_bucket"{
-#  bucket = var.bucket-name
-# 
-#  tags = {
-#    UserUuid = var.user_uuid
-#  }
-#}
-
-#}
 
 module "terrahouse_aws" {
-  source = "./modules/terrahouse_aws"
+    source = "./modules/terrahouse_aws"
+    user_uuid = var.user_uuid
+    bucket_name = var.bucket_name
+  }
 
-  user_uuid = var.user_uuid
-  bucket_name = var.bucket_name
+resource "aws_s3_bucket" "my_website_bucket" {
+  bucket = var.bucket_name
+
+  tags = {
+    UserUuid = var.user_uuid
+  }
 }
 
 resource "aws_s3_bucket_website_configuration" "bootcamp_2023" {
-  bucket = aws_s3_bucket.bootcamp_2023.bucket
+  bucket = aws_s3_bucket.my_website_bucket.bucket
 
   index_document {
     suffix = "index.html"
@@ -39,28 +37,6 @@ resource "aws_s3_bucket_website_configuration" "bootcamp_2023" {
   error_document {
     key = "error.html"
   }
-
-
-}
-
-module "terrahouse_aws" {
-  source = "./modules/terrahouse_aws"
-
-  user_uuid = var.user_uuid
-  bucket_name = var.bucket_name
-}
-
-resource "aws_s3_bucket_website_configuration" "bootcamp_2023" {
-  bucket = aws_s3_bucket.bootcamp_2023.bucket
-
-  index_document {
-    suffix = "index.html"
-  }
-
-  error_document {
-    key = "error.html"
-  }
-
 
   routing_rule {
     condition {
@@ -70,10 +46,7 @@ resource "aws_s3_bucket_website_configuration" "bootcamp_2023" {
       replace_key_prefix_with = "documents/"
     }
   }
-
 }
 
 
-}
 
-}
