@@ -12,27 +12,24 @@ terraform {
     }
   }
 
-
-resource "aws_s3_bucket" "my_website_bucket"{
-=======
-resource "aws_s3_bucket" "website_bucket"{
-
-  bucket = var.bucket-name
-  
-  tags = {
-    UserUuid = var.user_uuid
-  }
+#resource "aws_s3_bucket" "my_website_bucket"{
+#  bucket = var.bucket-name
+# 
+#  tags = {
+#    UserUuid = var.user_uuid
+#  }
+#}
 }
-}
-
-
-
-module "terrahouse_aws" {
-  source = "/modules/terrahouse_aws"
 
 module "terrahouse_aws" {
   source = "./modules/terrahouse_aws"
 
   user_uuid = var.user_uuid
   bucket_name = var.bucket_name
+}
+
+resource "aws_s3_bucket" "website" {
+  bucket = aws_s3_bucket.website
+  acl    = "public-read"
+
 }
