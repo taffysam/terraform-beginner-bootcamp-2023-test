@@ -13,13 +13,10 @@ terraform {
   }
 
 module "terrahouse_aws" {
-  source = "./modules/terrahouse_aws"
-
-  user_uuid = var.user_uuid
+  source      = "./modules/terrahouse_aws"
+  user_uuid   = var.user_uuid
   bucket_name = var.bucket_name
 }
-
-
 
 #resource "aws_s3_bucket" "my_website_bucket"{
 #  bucket = var.bucket-name
@@ -30,9 +27,6 @@ module "terrahouse_aws" {
 #}
 
 #}
-
-
-
 
 resource "aws_s3_bucket_website_configuration" "bootcamp_2023" {
   bucket = aws_s3_bucket.bootcamp_2023.bucket
@@ -46,12 +40,6 @@ resource "aws_s3_bucket_website_configuration" "bootcamp_2023" {
   }
 
 
-}
-
-module "terrahouse_aws" {
-  source = "./modules/terrahouse_aws"
-  user_uuid = var.user_uuid
-  bucket_name = var.bucket_name
 }
 
 resource "aws_s3_bucket_website_configuration" "bootcamp_2023" {
