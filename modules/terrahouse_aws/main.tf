@@ -40,6 +40,23 @@ resource "aws_s3_bucket_website_configuration" "bootcamp_2023" {
   }
 
 
+resource "aws_s3_bucket" "my_website_bucket"{
+  bucket = var.bucket-name
+    tags = {
+    UserUuid = var.user_uuid
+  }
+}
+
+resource "aws_s3_bucket_website_configuration" "bootcamp_2023" {
+  bucket = aws_s3_bucket.bootcamp_2023.bucket
+
+  index_document {
+    suffix = "index.html"
+  }
+
+  error_document {
+    key = "error.html"
+  }
 }
 
 resource "aws_s3_bucket_website_configuration" "bootcamp_2023" {
